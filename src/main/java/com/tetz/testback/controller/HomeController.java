@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping("")
     public String home() {
-        return "Hello, world";
+        return "Hello, Tetz's test server";
     }
 }
