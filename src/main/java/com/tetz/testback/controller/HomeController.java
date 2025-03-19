@@ -1,9 +1,7 @@
 package com.tetz.testback.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin("*")
@@ -12,5 +10,10 @@ public class HomeController {
     @GetMapping("")
     public String home() {
         return "Hello, Tetz's test server";
+    }
+    
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("여기는 Tetz 백엔드 서버 입니다");
     }
 }
