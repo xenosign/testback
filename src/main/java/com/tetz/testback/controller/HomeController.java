@@ -2,6 +2,8 @@ package com.tetz.testback.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
@@ -13,7 +15,9 @@ public class HomeController {
     }
     
     @GetMapping("/test")
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("여기는 Tetz 백엔드 서버 입니다");
+    public ResponseEntity<Map<String, String>> test() {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "여기는 Tetz 백엔드 서버 입니다");
+        return ResponseEntity.ok(response);
     }
 }
