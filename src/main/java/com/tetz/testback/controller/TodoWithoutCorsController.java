@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/todos/without-cors/")
+@RequestMapping("/todos/without-cors")
 public class TodoWithoutCorsController {
     private static final List<Map<String, Object>> ALL_TODOS = new ArrayList<>();
     private static final List<Map<String, String>> ALL_USERS = new ArrayList<>();
